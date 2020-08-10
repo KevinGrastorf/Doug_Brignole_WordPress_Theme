@@ -1,3 +1,7 @@
+ This is a Custom Theme I built for my client, Doug Brignole. It is composed of .php documents with a custom stylesheet along with some Javascript and jQuery. I used Underscores.me for the starter template (see below). 
+ 
+ 
+
 [![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
 
 _s
