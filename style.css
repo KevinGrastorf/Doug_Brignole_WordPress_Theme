@@ -1,0 +1,3522 @@
+/*!
+Theme Name: DougBrignole
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: dougbrignole
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+DougBrignole is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Custom CSS
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+/* normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+	 ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+	line-height: 1.15;
+	/* 1 */
+	-webkit-text-size-adjust: 100%;
+	/* 2 */
+}
+
+/* Sections
+	 ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+	margin: 0;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+/* Grouping content
+	 ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+	box-sizing: content-box;
+	/* 1 */
+	height: 0;
+	/* 1 */
+	overflow: visible;
+	/* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+	font-family: monospace, monospace;
+	/* 1 */
+	font-size: 1em;
+	/* 2 */
+}
+
+/* Text-level semantics
+	 ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+	background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+	border-bottom: none;
+	/* 1 */
+	text-decoration: underline;
+	/* 2 */
+	text-decoration: underline dotted;
+	/* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+	font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+	font-family: monospace, monospace;
+	/* 1 */
+	font-size: 1em;
+	/* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+	font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+/* Embedded content
+	 ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+	border-style: none;
+}
+
+/* Forms
+	 ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit;
+	/* 1 */
+	font-size: 100%;
+	/* 1 */
+	line-height: 1.15;
+	/* 1 */
+	margin: 0;
+	/* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input {
+	/* 1 */
+	overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select {
+	/* 1 */
+	text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+	-webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+	padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *		`fieldset` elements in all browsers.
+ */
+
+legend {
+	box-sizing: border-box;
+	/* 1 */
+	color: inherit;
+	/* 2 */
+	display: table;
+	/* 1 */
+	max-width: 100%;
+	/* 1 */
+	padding: 0;
+	/* 3 */
+	white-space: normal;
+	/* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+	vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+	overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+	box-sizing: border-box;
+	/* 1 */
+	padding: 0;
+	/* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+	-webkit-appearance: textfield;
+	/* 1 */
+	outline-offset: -2px;
+	/* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	/* 1 */
+	font: inherit;
+	/* 2 */
+}
+
+/* Interactive
+	 ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+	display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+	display: list-item;
+}
+
+/* Misc
+	 ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+	display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+	display: none;
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: #404040;
+	font-family: sans-serif;
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+}
+
+p {
+	margin-bottom: 1.5em;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: #fff;
+	/* Fallback for when there is no custom background color defined. */
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ul,
+ol {
+	margin: 0 0 1.5em 3em;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li>ul,
+li>ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+img {
+	height: auto;
+	/* Make sure images are scaled correctly. */
+	max-width: 100%;
+	/* Adhere to container width. */
+}
+
+figure {
+	margin: 1em 0;
+	/* Extra wide images within figure tags don't overflow the content area. */
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid;
+	border-color: #ccc #ccc #bbb;
+	border-radius: 3px;
+	background: #e6e6e6;
+	color: rgba(0, 0, 0, 0.8);
+	font-size: 12px;
+	font-size: 0.75rem;
+	line-height: 1;
+	padding: .6em 1em .4em;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	border-color: #ccc #bbb #aaa;
+}
+
+button:active,
+button:focus,
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus {
+	border-color: #aaa #bbb #bbb;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 3px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+	color: #111;
+}
+
+select {
+	border: 1px solid #ccc;
+}
+
+textarea {
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+/* a {
+	color: white;
+}
+
+a:visited {
+	color: white;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: midnightblue;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+} */
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+.main-navigation {
+	clear: both;
+	display: block;
+	float: left;
+	width: 100%;
+}
+
+.main-navigation ul {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.main-navigation ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	float: left;
+	position: absolute;
+	top: 100%;
+	left: -999em;
+	z-index: 99999;
+}
+
+.main-navigation ul ul ul {
+	left: -999em;
+	top: 0;
+}
+
+.main-navigation ul ul li:hover>ul,
+.main-navigation ul ul li.focus>ul {
+	left: 100%;
+}
+
+.main-navigation ul ul a {
+	width: 200px;
+}
+
+.main-navigation ul li:hover>ul,
+.main-navigation ul li.focus>ul {
+	left: auto;
+}
+
+.main-navigation li {
+	float: left;
+	position: relative;
+}
+
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+.cert-button {
+	width: auto;
+height: auto;
+font-size: 2vw;
+margin: 5vw 0 0 0;
+background-color: #E49224;
+color: white;
+text-shadow: 1px 1px black;
+border: 1px solid white;
+transition: all .2s ease-in-out;
+}
+
+.cert-button:hover {
+	transform: scale(1.2);
+}
+
+.pad {
+	margin-bottom: 5vw;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+	/* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+	/* Make sure select elements fit in widgets. */
+}
+
+.widget select {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.post,
+.page {
+	margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+	/* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+
+/*--------------------------------------------------------------
+# Custom CSS
+--------------------------------------------------------------*/
+body {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.parallax {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: 2fr 2fr 2fr;
+	background-image: url("https://dougbrignole.com/wp-content/uploads/2020/02/db2cr.jpg");
+	height: 100vh;
+	background-attachment: fixed;
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: scroll;
+
+}
+
+.parallax1 {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: 2fr 2fr 2fr;
+	background-image: url("https://dougbrignole.com/wp-content/uploads/2020/02/db3-1.jpg");
+	height: 100vh;
+	background-attachment: fixed;
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: scroll;
+}
+
+.parallax2 {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: 2fr 2fr 2fr;
+	background-image: url("https://dougbrignole.com/wp-content/uploads/2020/02/db9r.jpg");
+	height: 100vh;
+	background-attachment: fixed;
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-attachment: scroll;
+}
+
+.parallax3 {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: 2fr 2fr 2fr;
+	background-image: url("https://dougbrignole.com/wp-content/uploads/2019/10/db14.jpg");
+	height: 100vh;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	/* background-color: black; */
+
+}
+
+
+button#cta-book {
+	border: 3px solid white;
+	grid-column: 1/4;
+	grid-row: 3/4;
+	width: auto;
+	height: auto;
+	border-radius: 25px;
+	background-color: rgba(005, 005, 005, 0.5);
+	align-self: center;
+	justify-self: center;
+	padding: 3vw;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 5vw;
+}
+
+button#cta-book:hover {
+	border: 3px solid #E49224;
+	grid-column: 1/4;
+	grid-row: 3/4;
+	width: auto;
+	height: auto;
+	border-radius: 25px;
+	align-self: center;
+	justify-self: center;
+	padding: 3vw;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	background-color: rgba(0, 0, ff, 0.3);
+	margin: 5vw;
+}
+
+#cta-book>a {
+	font-size: 2.5vw;
+	font-family: 'Big Shoulders Display', cursive;
+	/* text-shadow: 1px 1px black; */
+	display: flex;
+	align-self: center;
+	justify-self: center;
+	/* background-color: #010101; */
+	text-transform: uppercase;
+	padding-left: 3vw;
+}
+
+#cta-book-text:visited,
+#cta-book-text:link,
+#goodreads:visited,
+#goodreads:visited {
+	color: black;
+}
+
+strong {
+	color: #E49224;
+}
+
+.bolded {
+	 font-weight: bold;
+	 font-size: 1rem;
+}
+
+.book-cover-sm {
+	width: 20%;
+	height: 20%;
+}
+
+#cta-book>a:visited,
+#cta-book>a:link {
+	color: white;
+}
+
+#cta-book>a:visited:hover,
+#cta-book>a:link:hover {
+	color: #E49224;
+}
+
+.p1 {
+	width: 20vw;
+}
+
+
+.logo {
+	grid-column: 1/4;
+	grid-row: 2/3;
+	justify-self: center;
+	max-width: 30vw;
+	max-height: 20vw;
+}
+
+.logo-nav {
+	height: 50px !important;
+}
+
+nav {
+	background-color: white !important;
+	/* box-shadow: 5px 5px 20px lightgray; */
+}
+
+.navdoug.fixed {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+}
+
+.navdoug {
+	position: relative;
+	z-index: 9999;
+}
+
+.navdoug2 {
+	position: relative;
+	z-index: 9999;
+}
+
+.front-page-top,
+.front-page-top-2 {
+	text-align: center;
+	padding: 20vh 0 0 0;
+	width: 49vw;
+}
+
+/* .front-page-top-2 {
+
+} */
+
+div#fm-tag.fifty:before {
+	 display: none;
+}
+
+.carousel-container {
+	height: 90vh;
+	widows: auto;
+	background-color: black;
+}
+
+.pic {
+	object-fit: contain;
+	height: 90vh;
+}
+
+.default-text {
+	font-family: 'Big Shoulders Display', cursive;
+}
+
+.title {
+	font-size: 1.5vw;
+	font-family: sans-serif;
+}
+
+.about {
+	color: #404040;
+	font-family: sans-serif;
+	font-size: 1rem;
+	/* text-shadow: 1px 1px black; */
+}
+
+.title>strong {
+	font-size: 6vw;
+	text-shadow: 3px 3px #E49224;
+	color: #336E68;
+	color: #E49224;
+	text-shadow: 5px 5px #336E68;
+	font-family: 'Big Shoulders Display', cursive;
+}
+
+.link {
+	color: #E49224;
+	text-shadow: 5px 5px #336E68;
+}
+
+.pad {
+	padding: 0 5vw;
+}
+
+.pad2,
+#main {
+	padding: 5vw;
+}
+
+
+.link:visited {
+	color: #E49224 !important;
+}
+
+#product-28>div.woocommerce-product-gallery.woocommerce-product-gallery--with-images.woocommerce-product-gallery--columns-4.images>figure>div>a>img {
+	width: 25vw;
+	margin: 5vw auto;
+	box-shadow: 5px 5px 50px black;
+}
+
+#tab-description,
+#reviews {
+	padding: 5vw;
+}
+
+#masthead,
+#main>nav {
+	display: none;
+}
+
+#product-28>div.summary.entry-summary {
+	padding-top: 15vh;
+}
+
+.front-top-book {
+	text-align: center;
+	font-size: 1.5vw;
+	color: #404040;
+}
+
+.discount {
+	 font-family: sans-serif;
+	 font-size: 2vw;
+	 color: red;
+	 text-align: center;
+}
+
+.bold {
+	font-size: 5vw;
+	margin: 0;
+	/* text-shadow: 1px 1px black; */
+	transition: ease-in-out;
+	-webkit-transition: ease-in-out;
+	transition-duration: 0.3s;
+	transform: scale(1.0);
+}
+
+.bold:hover {
+	font-size: 5vw;
+	margin: 0;
+	/* text-shadow: 1px 1px black; */
+	transition: ease-in-out;
+	-webkit-transition: ease-in-out;
+	transition-duration: 0.3s;
+	transform: scale(1.1);
+}
+
+.book-cover {
+	width: 22vw;
+	height: 30vw;
+	box-shadow: 5px 5px 50px black;
+	margin: 10vw auto;
+	justify-self: center;
+	align-self: center;
+	display: flex;
+	transition: ease-in-out;
+	-webkit-transition: ease-in-out;
+	transition-duration: 0.3s;
+	transform: scale(1.0);
+}
+
+.book-cover:hover {
+	box-shadow: 5px 5px 50px #E49224;
+	transition: ease-in-out;
+	-webkit-transition: ease-in-out;
+	transition-duration: 0.3s;
+	transform: scale(1.1);
+}
+
+.top-1 {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+u.youtube-link {
+	font-size: 1.7vw;
+	color: #E49224;
+	transition: ease-in-out;
+	-webkit-transition: ease-in-out;
+	transition-duration: 0.3s;
+	transform: scale(1.0);
+}
+
+u.youtube-link:hover {
+	font-size: 1.7vw;
+	color: #E49224;
+	transition: ease-in-out;
+	-webkit-transition: ease-in-out;
+	transition-duration: 0.3s;
+	transform: scale(1.3);
+}
+
+.front-top-1 {
+	width: 48vw;
+	color: #404040;
+	align-self: center;
+	justify-self: center;
+}
+
+blockquote,
+cite {
+	margin-left: 5vw;
+	padding-top: 2vw;
+}
+
+blockquote {
+	/* border-left: 2px solid white; */
+	height: auto;
+	padding-left: 1vw;
+	/* text-shadow: 1px 1px black; */
+}
+
+cite {
+	/* text-shadow: 1px 1px black; */
+}
+
+/* a:visited, a:link {
+	color: white;
+	text-shadow: 1px 1px black;
+} */
+
+.front-top-2 {
+	width: 48vw;
+}
+
+.quote-mark {
+	font-size: 3vw;
+	color: #E49224;
+	/* text-shadow: 2px 2px black; */
+}
+
+.top-1,
+.middle-1 {
+	/* background-color: #202020; */
+	background-size: cover;
+	background-position: center;
+}
+
+.middle-1 {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+	background-color: #E49224 !important;
+}
+
+#secondary {
+	padding: 0 5vw;
+}
+
+
+a.nav-link,
+a.dropdown-item {
+	font-family: 'Big Shoulders Display', cursive !important;
+	font-size: 1.5vw;
+}
+
+#customer_details>div.col-1,
+#customer_details>div.col-1>div {
+	width: 80vw;
+}
+
+/* #customer_details > div.col-1 > div > div, #order_review  */
+
+#customer_details>div.col-1>div,
+#order_review_heading,
+#order_review_heading,
+#order_review {
+	padding: 5vw;
+}
+
+#order_comments {
+	width: 10vw;
+	height: 10vw;
+}
+
+.form-row {
+	flex-direction: column;
+}
+
+#customer_details>div.col-1>div>div {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+}
+
+#billing_address_2 {
+	margin-top: 8%;
+}
+
+#billing_first_name,
+#billing_last_name {
+	width: 34.5vw !important;
+}
+
+.doug-then {
+	width: 15vw;
+	transform: scale(1);
+}
+
+.doug-now {
+	width: 15vw;
+}
+
+.story-link {
+	text-transform: uppercase;
+	/* font-family: sans-serif; */
+	font-family: 'Big Shoulders Display', cursive;
+	font-size: 2rem;
+}
+
+.story-link:visited,
+.story-link:link {
+	color: #E49224;
+}
+
+.champion {
+	font-family: 'Big Shoulders Display', cursive;
+	font-size: 4.5rem;
+	color: #404040;
+	margin: 2vw;
+	/* text-shadow: 5px 5px black; */
+}
+
+.faq {
+	font-family: 'Big Shoulders Display', cursive;
+	font-size: 3rem;
+	text-align: center;
+	margin-top: 5vw;
+	color: #E49224;
+
+	/* text-shadow: 2px 2px black; */
+}
+
+.question {
+	background-color: #373737;
+	/* color: #444; */
+	cursor: pointer;
+	padding: 18px;
+	width: 90vw;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+	transition: 0.4s;
+	margin: 0 5vw;
+	font-family: 'Big Shoulders Display', cursive;
+	font-size: 1.5rem;
+	color: white;
+	text-shadow: 1px 1px black;
+	border: solid 2px white;
+}
+
+.active,
+.question:hover {
+	background-color: #ccc;
+	color: black;
+	text-shadow: 1px 1px white;
+	border: solid 2px black;
+}
+
+.panel {
+	padding: 0 18px;
+	display: none;
+	background-color: white;
+	overflow: hidden;
+	widows: 90vw;
+	margin: 2vw 5vw;
+	;
+}
+
+#svg-caret {
+	fill: white;
+}
+
+#svg-caret:hover {
+	fill: black;
+}
+
+#youtube-container {
+	background-color: #202020;
+	align-content: center;
+	justify-items: center;
+}
+
+#youtube:visited,
+#youtube:link,
+#youtube,
+#youtube>a {
+	text-align: center;
+	width: 100vw;
+	font-family: 'Big Shoulders Display', cursive;
+	font-size: 4.5rem;
+	color: #E49224;
+	padding: 5vw 0 0 0;
+	margin: 0;
+}
+
+.videos {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 2fr 2fr 2fr;
+	grid-gap: 5vw;
+	align-content: center;
+	justify-items: center;
+	padding-bottom: 5vw;
+}
+
+.v1 {
+	display: grid;
+	grid-column: 1/2;
+	grid-row: 1/2;
+	/* border: 5px solid white;
+	box-shadow: 5px 5px 50px black; */
+	margin-left: 5vw;
+}
+
+.v2 {
+	display: grid;
+	grid-column: 2/3;
+	grid-row: 1/2;
+	/* border: 5px solid white;
+	box-shadow: 5px 5px 50px black; */
+	margin-right: 5vw;
+}
+
+.v3 {
+	display: grid;
+	grid-column: 1/2;
+	grid-row: 2/3;
+	/* border: 5px solid white;
+	box-shadow: 5px 5px 50px black; */
+	margin-left: 5vw;
+}
+
+.v4 {
+	display: grid;
+	grid-column: 2/3;
+	grid-row: 2/3;
+	/* border: 5px solid white;
+	box-shadow: 5px 5px 50px black; */
+	margin-right: 5vw;
+}
+
+.v5 {
+	display: grid;
+	grid-column: 1/2;
+	grid-row: 3/4;
+	/* border: 5px solid white;
+	box-shadow: 5px 5px 50px black; */
+	margin-left: 5vw;
+}
+
+.v6 {
+	display: grid;
+	grid-column: 2/3s;
+	grid-row: 3/4;
+	/* border: 5px solid white;
+	box-shadow: 5px 5px 50px black; */
+	margin-right: 5vw;
+}
+
+.subscribe {
+	font-family: sans-serif;
+	color: white;
+	font-size: 1rem;
+	text-align: center;
+	text-shadow: 1px 1px black;
+	padding-bottom: 3vw;
+}
+
+.youtube-button {
+	background-color: #CC0100;
+	border: none;
+	width: auto;
+	height: auto;
+	margin: 0 auto;
+	display: flex;
+	align-self: center;
+	justify-self: center;
+	/* margin: 3vw 0 auto; */
+}
+
+.youtube-button>a {
+	color: white;
+	font-family: sans-serif;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	margin: 0 auto;
+	align-self: center;
+}
+
+#yb-container {
+	margin: 2vw 0 4vw 0;
+	display: flex;
+}
+
+.social {
+	width: 50px;
+}
+
+.face {
+	position: absolute;
+	right: 100px;
+}
+
+.insta {
+	position: absolute;
+	right: 25px;
+}
+
+aside {
+	display: none;
+}
+
+/* Product - Dual Cable Cross */
+
+.product-header__title-big--yellow {
+	color: #ffc700;
+}
+
+.product-header__title-big {
+	font-family: XXIINeueNorm-CndBlackIt;
+    font-size: 80px;
+    line-height: 80px;
+}
+
+.product-container {
+	background-color: #ffc700;
+	display: flow-root;
+}
+
+.product-info {
+	width: 32vw;
+	color: white !important;
+}
+
+
+
+.info-title {
+	text-transform: uppercase;
+    color: white;
+    line-height: 20px;
+	font-family: HouschkaAltPro-Medium;
+    font-size: 14px;
+    color: white;
+}
+
+.info-bite {
+	font-family: HouschkaAltPro-Medium;
+    font-size: 14px;
+    color: white;
+    line-height: 18px;
+}
+
+/*Coming Soon*/
+
+#coming-soon {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background-image: url('https://dougbrignole.com/wp-content/uploads/2019/10/db9-sm.jpg');
+	background-size: 50vw;
+	background-position: top;
+	background-repeat: no-repeat;
+	top: 5vw !important;
+	position: fixed !important;
+}
+
+#soon-title {
+	font-size: 7vw;
+	text-align: left;
+	font-family: 'Big Shoulders Display', cursive;
+	color: #E49224;
+	width: 100vw;
+	margin-bottom: .5vw;
+	padding-left: 5vw;
+	padding-top: 5vw;
+}
+
+.flex-container {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}
+
+#doug-soon {
+	width: 50vw;
+}\\
+/* Contests */
+
+.contest-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.contest {
+	display: flex;
+    flex-direction: row;
+    height: 50vh;
+    width: 100vw;
+    padding: 5vh 5vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.contest-odd {
+	background-color: #F1F1F1;
+}
+
+.contest-year {
+	display: flex;
+	width: 10vw;
+}
+
+.contest-title {
+	display: flex;
+	width: 35vw;
+}
+
+.contest-place {
+	display: flex;
+	width: 20vw;
+}
+
+.contest-photo {
+	display: flex;
+    height: 15vh;
+    width: auto;
+    justify-self: center;
+    align-self: center;
+	margin: auto;
+	border: 2px solid white;
+	box-shadow: 0 0 10px grey;
+	opacity: 0;
+	transition: all 1s ease-out;
+}
+
+.fade-in {
+	opacity: 1;
+	transform: scale(3);
+}
+
+/* Photos*/
+
+#photos-title,
+#blog-title {
+	font-size: 7vw;
+	text-align: center;
+	font-family: 'Big Shoulders Display', cursive;
+	color: #E49224;
+	width: 100vw;
+	margin-bottom: .5vw;
+}
+
+#enlarge {
+	width: 100vw;
+	text-align: center;
+	font-size: 2.5vw;
+}
+
+.for-purchase {
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 1.5vw;;
+}
+
+#photo-container {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	flex-direction: flex-start;
+	display: flow-root;
+}
+
+.pic {
+	width: 20vw;
+	height: 30vw;
+	overflow: hidden;
+
+}
+
+.photos-image {
+	margin: 2vw;
+}
+
+/* Product */
+
+/* Product - Dual Cable Cross */
+
+.product-header__title-big--yellow {
+	color: #ffc700;
+}
+
+.product-header__title-big {
+	font-family: XXIINeueNorm-CndBlackIt;
+    font-size: 80px;
+    line-height: 80px;
+}
+
+.product-container {
+	background-color: #ffc700;
+	display: flow-root;
+}
+
+.product-info-title {
+
+}
+
+.product-info {
+	width: 32vw;
+	color: white !important;
+}
+
+.info-point {
+
+}
+
+.info-title {
+	text-transform: uppercase;
+    color: white;
+    line-height: 20px;
+	font-family: HouschkaAltPro-Medium;
+    font-size: 14px;
+    color: white;
+}
+
+.info-bite {
+	font-family: HouschkaAltPro-Medium;
+    font-size: 14px;
+    color: white;
+    line-height: 18px;
+}
+
+/* Front Section - Freemotion */
+
+.freemotion-section {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.fm-title {
+	color: #ffc700;
+	font-family: XXIINeueNorm-CndBlackIt;
+    font-size: 3vw;
+    line-height: 1;
+}
+
+.number {
+	font-size: 2vw;
+}
+
+.fm-machine {
+	width: 45vw;
+	padding: 2vw;
+	margin: 2vw;
+}
+
+.fm-button {
+	background-color:  #E49224;
+	margin: 0 auto;
+}
+
+.fm-link {
+	color: white;
+	font-size: 1.5vw;
+	text-transform: uppercase;
+}
+
+.fm-img {
+	height: 50vh;
+	margin: 0 auto;
+}
+
+.fm-desc {
+	font-family: sans-serif;
+	font-size: 1.2vw;
+	text-align: center;
+	padding-top: 5vw;
+}
+
+.fm-button-container {
+	padding-top: 3vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.fm-cta {
+	width: 100vw;
+	border: 3px solid  #E49224;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.fm-cta-text {
+	align-self: center;
+	justify-self: center;
+	font-size: 2vw;
+	margin: 0;
+}
+
+.fm-sm-pic {
+	width: 5vw;
+	height: 8vw;
+}
+
+.fifty:before {
+	height: 23vh;
+	display: block;
+	content: '';
+  }
+
+
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+	display: inline-block;
+}
+
+.header-title {
+	text-align: center;
+	font-family: 'Big Shoulders Display', cursive;
+	font-size: 4.5rem;
+	color: #E49224;
+	margin: 0;
+	padding: 2vw 0;
+	width: 100vw;
+	background-color: #202020;
+}
+
+.header-title-white {
+	text-align: center;
+	font-family: 'Big Shoulders Display', cursive;
+	font-size: 4.5rem;
+	color: #E49224;
+	margin: 0;
+	padding: 2vw 0;
+	width: 100vw;
+	/* background-color: #202020; */
+}
+
+.what-is-hr {
+	border-top: solid 3px #E49224;
+	width: 40vw;
+	align-self: center;
+	margin: 0 auto;
+}
+
+.what-is, .what-is>h2 {
+	text-align: center;
+	width: 100vw;
+	font-family: sans-serif;
+	font-size: 3vw;
+	color: white;
+	background-color: #202020;
+	margin: 0 !important;
+	padding: 5vh 0;
+
+}
+
+.what-is-about {
+	display: flex;
+	flex-direction: column;
+	color: white;
+	background-color: #202020;
+	padding:  5vw;
+}
+
+.what-is>p {
+	padding: 0 5vw;
+}
+
+.cert-1 {
+	 display:  flex;
+	 flex-direction: row;
+	 background-color: #202020;
+}
+
+.coordinator-pic {
+	width: 20vw;
+	margin: 5vw 5vw 5vw 15vw;
+	border: solid 5px #E49224;
+
+}
+
+.coordinator-text {
+	width: 78vw;
+ 	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #202020;
+}
+
+.coordinator-title {
+	font-size: 2.5vw;
+	font-family: sans-serif;
+	color: white;
+	text-align: center;
+}
+
+.coordinator-name {
+	font-size: 3.5vw;
+	font-family: sans-serif;
+	color: #E49224;
+	padding-top: 2vw;
+}
+
+.coordinator-list {
+	padding-top: 10vh;
+	 color: white;
+}
+
+.coordinator-about {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #202020;
+}
+
+.about-coordinator{
+	 padding: 0 5vw;
+	 color: white;
+	 background-color: #202020;
+}
+
+.articles {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #202020;
+}
+
+.article {
+	width: 43vw;
+	margin: 3vw;
+	border: 3px solid #404040;
+	background-color: rgba(255, 255, 255, 0.2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	border-radius: 25px;
+}
+
+.article>p {
+	color: white;
+	padding: 0 2vw;
+}
+
+.art-pic {
+	padding-bottom: 10vh;
+}
+
+.top-line {
+	padding-top: 2vw !important;
+}
+
+.article-title, .universe-title, .past-articles-title {
+	text-align: center;
+	font-family: 'Big Shoulders Display', cursive;
+	font-size: 3.5rem;
+	color: #E49224;
+	margin: 0;
+	padding: 2vw 0;
+}
+
+.long-article {
+	padding-top: 0 !important;
+}
+
+.long-title {
+	 padding-right: 2vw !important;
+}
+
+
+
+.article-sub-title {
+	text-align: center;
+	font-family: 'Big Shoulders Display', cursive;
+	font-size: 2rem;
+	color: #E49224;
+	margin: 0;
+	padding: 2vw 0;
+}
+
+
+
+.article-title:hover {
+	text-align: center;
+	font-family: 'Big Shoulders Display', cursive;
+	font-size: 3.5rem;
+	color: white;
+	margin: 0;
+	padding: 2vw 0;
+}
+
+.article>img {
+	width: 40vw;
+}
+
+.articles-links > a {
+	padding: 2vw 0;
+}
+
+.read-more {
+	color: #E49224;
+}
+
+.read-more:hover {
+	color: white;
+}
+
+.photos-image {
+	width: 20vw;
+
+}
+
+.universe-top {
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+}
+
+.universe-logo {
+	width: 20vw;
+	justify-self: center;
+	align-self: center;
+}
+
+.universe-top-pic {
+	width: 40vw;
+	justify-self: center;
+	align-self: center;
+}
+
+.universes-inner {
+	width: 80vw;
+	align-self: center;
+	justify-self: center;
+	padding-top: 10vw;
+}
+
+.metaslider_container_106 {
+	 width: 300px !important;
+	 align-self: center;
+	 justify-self: center;
+}
+
+#metaslider-id-106 {
+	width: 300px;
+    align-self: center;
+    justify-self: center;
+    margin: 0 auto;
+}
+
+.universe-slideshow {
+	width: 300px;
+	margin: 0 auto;
+	padding-top: 10vh;
+}
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+
+}
+
+
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+.footer-text {
+	font-family: 'Big Shoulders Display', cursive;
+	font-size: 1.5vw;
+	text-align: center;
+}
+
+/* Product */
+
+/* Product - Dual Cable Cross */
+
+.product-header__title-big--yellow {
+	color: #ffc700;
+}
+
+.product-header__title-big {
+	font-family: XXIINeueNorm-CndBlackIt;
+    font-size: 80px;
+    line-height: 80px;
+}
+
+.product-container {
+	background-color: #ffc700;
+
+}
+
+.product-info-title {
+	background-color: white;
+    color: #104777;
+    font-weight: bold;
+    font-size: 52px;
+	  color: #ffc700;
+}
+
+.product-info {
+/* 	align-items: center;
+	justify-items: center;
+	color: white !important;
+	display: flex;
+	align-content: flex-start;
+	flex-wrap: wrap;
+	align-content: space-between; */
+	padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+	width: auto;
+}
+
+.info-point {
+    padding: 2vw;
+    width: 25vw;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.info-title {
+	text-transform: uppercase;
+    color: white;
+    line-height: 1;
+	font-family: HouschkaAltPro-Medium;
+    font-size: 1.5vw;
+    color: white;
+	font-weight: bold;
+}
+
+hr {
+	border-top:2px solid white;
+	width: 3vw;
+	margin: 1vw 1vw 1vw 0;
+}
+.info-bite {
+	font-family: HouschkaAltPro-Medium;
+    font-size: 14px;
+    color: white;
+    line-height: 18px;
+}
+
+.product-box {
+	width: 60vw;
+	margin: 0 auto
+}
+
+.download, .download:visited, .download:link {
+	color: white !important;
+	border-radius: 25px;
+	background-color: white;
+	border: 3px solid black;
+	    margin-bottom: 1.5em;
+	margin-left: 10vw
+
+}
+.product-info {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+}
+
+.product-box {
+	width: 60vw;
+	display: flex;
+	flex-direction: row;
+	background-color: white;
+		padding: 2vw;
+
+}
+
+.box-title {
+	width: 60vw;
+	margin: 0 auto;
+	color: white;
+	font-size: 2vw
+}
+
+.box-right {
+	 width: 25vw;
+
+}
+
+.box-left {
+	width: 35vw;
+}
+
+.box-left > p > strong {
+	 color: black;
+
+}
+
+.g-number {
+	font-size: 3rem
+}
+
+#product-1188 > div.summary.entry-summary > h1, #product-1205 > div.summary.entry-summary > h1  {
+	color: white;
+}
+
+/***** Articles ****/
+
+.articles-disclaimer-text {
+	    padding: 2vw 5vw;
+			font-size: 1.5vw;
+}
+
+.logo {
+	width: 20vw;
+	height: auto;
+display: flex;
+padding: 5vw 0;
+margin: auto;
+}
+
+
+
+.articles-links {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+padding: 2vw 5vw;
+
+}
+
+.articles-links > a {
+	width: 30vw;
+
+}
+
+.full-disclaimer-page {
+  text-align: center;
+  padding: 5vw
+}
+
+.full-disclaimer {
+
+}
+
+.red {
+  color: red;
+  font-weight: 900;
+
+}
+
+.full-disclaimer-page > ul {
+	 text-align: left;
+}
+
+.full-disclaimer-page > ul >li {
+	 padding: 1vw 0;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/* Blog */
+
+
+	.listing-item {
+		padding: 5vw;
+	}
+
+	.title {
+		font-size: 3vw;
+		font-family: 'Big Shoulders Display', cursive;
+	}
+
+	#post-10872 > div > div:nth-child(15) > figure > img,
+	#post-10872 > div > div:nth-child(20) > figure > img,
+	#post-10872 > div > div:nth-child(28) > figure > img,
+	#post-10872 > div > figure > ul > li > figure > img,
+	#post-10872 > div > div:nth-child(73) > figure > img,
+	#post-10872 > div > figure > img {
+		width: 30vw;
+	}
+
+	#post-10872 > div > div:nth-child(15) > figure > img,
+	#post-10872 > div > div:nth-child(20) > figure > img,
+	#post-10872 > div > div:nth-child(28) > figure > img {
+		width: 50vw;
+	}
+
+	.listing-item {
+		display: flex;
+flex-direction: column;
+text-align: center;
+	}
+
+	#post-10872 > div > figure > img {
+		margin-left: 30%;
+	}
+
+	.display-posts-date {
+		text-align: center;
+	}
+
+	ul.display-posts-listing {
+		margin: 0;
+		padding-left: 0;
+	}
+
+
+
+@media only screen and (max-width: 900px) {
+
+	/***** Blog Posts *****/
+
+	#post-10856 > header > h1 {
+
+	}
+
+	.title {
+		font-size: 9vw;
+		font-family: 'Big Shoulders Display', cursive;
+	}
+
+	.entry-title {
+		font-size: 15vw;
+	}
+
+	.entry-meta {
+		font-size: 6vw;
+	}
+
+	.has-text-align-center {
+		font-size: 6vw;
+	}
+
+	.what-is, .what-is>h2 {
+		text-align: center;
+		width: 100vw;
+		font-family: sans-serif;
+		font-size: 7vw;
+		color: white;
+		background-color: #202020;
+		margin: 0 !important;
+		padding: 5vh 0;
+
+	}
+
+	/****** Banner ******/
+
+	.fm-cta-text {
+		align-self: center;
+		justify-self: center;
+		font-size: 5vw;
+		margin: 0;
+		text-align: center;
+	}
+
+	.fm-sm-pic {
+		width: 15vw;
+		height: 20vw;
+	}
+
+	/***** Photos *****/
+
+
+.for-purchase {
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 5vw;;
+	padding: 0 3vw;
+}
+
+#enlarge {
+	width: 100vw;
+	text-align: center;
+	font-size: 7.5vw;
+}
+
+/***** Contests ******/
+
+.contest {
+	display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    padding: 5vh 5vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.contest-year {
+	display: flex;
+	text-align: center;
+	width: auto;
+}
+
+.contest-title {
+	display: flex;
+	text-align: center;
+	width: auto;
+	border-bottom: 2px solid grey;
+    padding-bottom: 5vw;
+}
+
+.contest-place {
+	display: flex;
+	text-align: center;
+	width: auto;
+}
+
+
+/***** Discount ******/
+
+.discount {
+	font-family: sans-serif;
+	font-size: 7vw;
+	color: red;
+	text-align: center;
+}
+
+	/*****T itles *****/
+
+	#photos-title,
+	#blog-title {
+		font-size: 15vw;
+		text-align: center;
+		font-family: 'Big Shoulders Display', cursive;
+		color: #E49224;
+		width: 100vw;
+		margin-bottom: .5vw;
+	}
+
+	.article-title, .universe-title, .past-articles-title {
+		text-align: center;
+		font-family: 'Big Shoulders Display', cursive;
+		font-size: 3.5rem;
+		color: #E49224;
+		margin: 0;
+		padding: 2vw 5vw;
+	}
+
+	.universe-logo {
+		width: 70vw;
+		justify-self: center;
+		align-self: center;
+	}
+
+	.universe-top-pic {
+		width: 80vw;
+		justify-self: center;
+		align-self: center;
+	}
+
+	/* */
+
+	.cert-1 {
+		 display:  flex;
+		 flex-direction: column;
+		 background-color: #202020;
+		 justify-content: center;
+		 align-items: center;
+	}
+
+	.coordinator-pic {
+		width: 80vw;
+		margin: 5vw;
+		border: solid 5px #E49224;
+
+	}
+
+	.coordinator-text {
+		width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #202020;
+	}
+
+
+
+	.coordinator-title {
+		font-size: 7vw;
+		font-family: sans-serif;
+		color: white;
+		text-align: center;
+	}
+
+	.coordinator-name {
+		font-size: 10vw;
+		font-family: sans-serif;
+		color: #E49224;
+		padding-top: 2vw;
+	}
+
+	.coordinator-list {
+		padding-top: 2vh;
+		 color: white;
+	}
+
+	.coordinator-about {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: #202020;
+	}
+
+	.about-coordinator {
+		 padding: 0 5vw;
+		 color: white;
+		 background-color: #202020;
+	}
+
+	.footer-text {
+		font-family: 'Big Shoulders Display', cursive;
+		font-size: 5vw;
+		text-align: center;
+	}
+
+	#content > div.cert-soon > h1 {
+		font-size: 7vw;
+	}
+
+	.cert-button {
+		width: auto;
+    height: auto;
+    font-size: 2vw;
+    margin: 5vw 0 0 0;
+    background-color: #E49224;
+    color: white;
+    text-shadow: 1px 1px black;
+    border: 1px solid white;
+	}
+
+	#coming-soon {
+		background-size: cover;
+		width: 100vw;
+		height: 100vh;
+		overflow: hidden;
+		background-image: url(https://dougbrignole.com/wp-content/uploads/2019/10/db9-sm.jpg);
+		background-size: 110%;
+		background-position: bottom;
+		background-repeat: no-repeat;
+		position: fixed !important;
+		margin-bottom: -5vh;
+	}
+
+	#soon-title {
+		font-size: 15vw;
+		text-align: center;
+		font-family: 'Big Shoulders Display', cursive;
+		color: #E49224;
+		width: 100vw;
+		margin-bottom: .5vw;
+	}
+
+	a.nav-link,
+	a.dropdown-item {
+		font-family: 'Big Shoulders Display', cursive !important;
+		font-size: 5vw;
+	}
+
+	.social {
+		width: 5vw;
+	}
+
+	.parallax {
+		display: grid;
+		grid-template-columns: 2fr 2fr;
+		grid-template-rows: 2fr 2fr 2fr 2fr 2fr;
+		/* grid-gap: 5vw; */
+		/* The image used */
+		background-image: url("https://dougbrignole.com/wp-content/uploads/2020/02/db2cr.jpg");
+
+		/* Set a specific height */
+		height: 100vh;
+
+		/* Create the parallax scrolling effect */
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: scroll;
+	}
+
+	.parallax1 {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: 2fr 2fr 2fr;
+		background-image: url("https://dougbrignole.com/wp-content/uploads/2020/02/db3-1.jpg");
+		height: 100vh;
+		background-attachment: fixed;
+		background-position: top;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: scroll;
+	}
+
+	.parallax2 {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: 2fr 2fr 2fr;
+		background-image: url("https://dougbrignole.com/wp-content/uploads/2020/02/db9r.jpg");
+		height: 100vh;
+		background-attachment: fixed;
+		background-position: top;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-attachment: scroll;
+	}
+
+	.parallax3 {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: 2fr 2fr 2fr;
+		background-image: url("https://dougbrignole.com/wp-content/uploads/2019/10/db14.jpg");
+		height: 100vh;
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		/* background-color: black; */
+		background-attachment: scroll;
+	}
+
+	.parallax4 {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: 2fr 2fr 2fr;
+		background-image: url("https://dougbrignole.com/wp-content/uploads/2019/10/db14.jpg");
+		height: 100vh;
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		/* background-color: black; */
+		background-attachment: scroll;
+	}
+
+	button#cta-book {
+		/* border: 3px solid white;
+		grid-column: 1/4;
+		grid-row: 3/4;
+		width: auto;
+		height: auto;
+		border-radius: 25px;
+		background-color: rgba(005, 005, 005, 0.5);
+		align-self: center;
+		justify-self: center;
+		padding: 3vw;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin: 5vw; */
+		display: none;
+	}
+
+	/* button#cta-book:hover {
+		border: 3px solid #E49224;
+		grid-column: 1/4;
+		grid-row: 3/4;
+		width: auto;
+		height: auto;
+		border-radius: 25px;
+		align-self: center;
+		justify-self: center;
+		padding: 3vw;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		background-color: rgba(0, 0, ff, 0.3);
+		margin: 5vw;
+	}*/
+
+	#cta-book>a {
+		font-size: 2.5vw;
+		font-family: 'Big Shoulders Display', cursive;
+		/* text-shadow: 1px 1px black; */
+		display: flex;
+		align-self: center;
+		justify-self: center;
+		/* background-color: #010101; */
+		text-transform: uppercase;
+		padding-left: 3vw;
+	}
+
+	#cta-book-text:visited,
+	#cta-book-text:link,
+	#goodreads:visited,
+	#goodreads:visited {
+		color: black;
+	}
+
+	 strong {
+		color: #E49224;
+	}
+
+	.book-cover-sm {
+		width: 20%;
+		height: 20%;
+	}
+
+	#cta-book>a:visited,
+	#cta-book>a:link {
+		color: white;
+	}
+
+	#cta-book>a:visited:hover,
+	#cta-book>a:link:hover {
+		color: #E49224;
+	}
+
+	.p1 {
+		width: 20vw;
+	}
+
+
+	.logo {
+		grid-column: 1/4;
+		grid-row: 2/3;
+		justify-self: center;
+		max-width: 30vw;
+		max-height: 20vw;
+	}
+
+	.logo-nav {
+		height: 50px !important;
+	}
+
+	nav {
+		background-color: white !important;
+		/* box-shadow: 5px 5px 20px lightgray; */
+	}
+
+	.navdoug.fixed {
+		position: fixed;
+		top: 0;
+		width: 100vw;
+	}
+
+	.navdoug {
+		position: relative;
+		z-index: 9999;
+	}
+
+	.navdoug2 {
+		position: relative;
+		z-index: 9999;
+	}
+
+	.front-page-top,
+	.front-page-top-2 {
+		text-align: center;
+		padding: 5vh 0 0 0;
+		width: 100vw;
+	}
+
+	.front-page-top-2 {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		justify-items: center;
+	}
+
+	.front-top-1,
+	.front-top-2 {
+		width: 100vw;
+		color: #404040;
+		align-self: center;
+		justify-self: center;
+	}
+
+	.front-top-book {
+		text-align: center;
+		font-size: 7vw;
+		color: #404040;
+	}
+
+	.bold {
+		font-size: 14vw;
+		margin: 0;
+		/* text-shadow: 1px 1px black; */
+		transition: ease-in-out;
+		-webkit-transition: ease-in-out;
+		transition-duration: 0.3s;
+		transform: scale(1.0);
+	}
+
+	.bold:hover {
+		font-size: 14vw;
+		margin: 0;
+		/* text-shadow: 1px 1px black; */
+		transition: ease-in-out;
+		-webkit-transition: ease-in-out;
+		transition-duration: 0.3s;
+		transform: scale(1.1);
+	}
+
+	.book-cover {
+		width: 44vw;
+		height: 60vw;
+		box-shadow: 5px 5px 50px black;
+		margin: 10vw auto;
+		justify-self: center;
+		align-self: center;
+		display: flex;
+		transition: ease-in-out;
+		-webkit-transition: ease-in-out;
+		transition-duration: 0.3s;
+		transform: scale(1.0);
+	}
+
+	.book-cover:hover {
+		box-shadow: 5px 5px 50px #E49224;
+		transition: ease-in-out;
+		-webkit-transition: ease-in-out;
+		transition-duration: 0.3s;
+		transform: scale(1.1);
+	}
+
+	.top-1 {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.quote-mark {
+		font-size: 5vw;
+		color: #E49224;
+		/* text-shadow: 2px 2px black; */
+	}
+
+	.doug-then {
+		width: 80vw;
+		transform: scale(1);
+		padding-bottom: 10vh;
+	}
+
+	.doug-now {
+		width: 80vw;
+	}
+
+
+	.logo {
+		grid-column: 1/3;
+		grid-row: 5/6;
+		justify-self: center;
+		max-width: 90vw;
+		max-height: 60vw;
+	}
+
+
+	/*Product*/
+	#product-28>div.woocommerce-product-gallery.woocommerce-product-gallery--with-images.woocommerce-product-gallery--columns-4.images>figure>div>a>img {
+		width: 50vw;
+	}
+
+	#product-1188 > div.summary.entry-summary > h1, #product-1205 > div.summary.entry-summary > h1 {
+		color: white !important;
+	}
+
+	/*Articles*/
+
+	.articles {
+		display: flex;
+		flex-wrap: wrap;
+		background-color: #202020;
+	}
+
+	.article {
+		width: 100vw;
+		margin: 3vw;
+		border: 3px solid #404040;
+		background-color: rgba(255, 255, 255, 0.2);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		border-radius: 25px;
+	}
+
+	.article>p {
+		color: white;
+		padding: 0 2vw;
+	}
+
+	.top-line {
+		padding-top: 2vw !important;
+	}
+
+	.article-title {
+		text-align: center;
+		font-family: 'Big Shoulders Display', cursive;
+		font-size: 3.5rem;
+		color: #E49224;
+		margin: 0;
+		padding: 2vw 0;
+	}
+
+	.article-title:hover {
+		text-align: center;
+		font-family: 'Big Shoulders Display', cursive;
+		font-size: 3.5rem;
+		color: white;
+		margin: 0;
+		padding: 2vw 0;
+	}
+
+	.article>img {
+		width: 40vw;
+	}
+
+	.read-more {
+		color: #E49224;
+	}
+
+	.read-more:hover {
+		color: white;
+	}
+
+	.photos-image {
+		width: 20vw;
+	}
+
+	/*YouYube*/
+
+	.videos {
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+		justify-items: center;
+		padding-bottom: 5vw;
+	}
+
+	.v1 {
+		/* display: grid;
+		grid-column: 1/2;
+		grid-row: 1/2; */
+		/* border: 5px solid white;
+		box-shadow: 5px 5px 50px black; */
+		margin: 0 auto;
+		width: 80vw;
+		height: 44vw;
+		margin-top: 3vh;
+		margin-bottom: 3vh;
+	}
+
+	.v2 {
+		/* display: grid;
+		grid-column: 2/3;
+		grid-row: 1/2; */
+		/* border: 5px solid white;
+		box-shadow: 5px 5px 50px black; */
+		margin: 0 auto;
+		width: 80vw;
+		height: 44vw;
+		margin-top: 3vh;
+		margin-bottom: 3vh;
+	}
+
+	.v3 {
+		/* display: grid;
+		grid-column: 1/2;
+		grid-row: 2/3; */
+		/* border: 5px solid white;
+		box-shadow: 5px 5px 50px black; */
+		margin: 0 auto;
+		width: 80vw;
+		height: 44vw;
+		margin-top: 3vh;
+		margin-bottom: 3vh;
+	}
+
+	.v4 {
+		/* display: grid;
+		grid-column: 2/3;
+		grid-row: 2/3; */
+		/* border: 5px solid white;
+		box-shadow: 5px 5px 50px black; */
+		margin: 0 auto;
+		width: 80vw;
+		height: 44vw;
+		margin-top: 3vh;
+		margin-bottom: 3vh;
+	}
+
+	.v5 {
+		/* display: grid;
+		grid-column: 1/2;
+		grid-row: 3/4; */
+		/* border: 5px solid white;
+		box-shadow: 5px 5px 50px black; */
+		margin: 0 auto;
+		width: 80vw;
+		height: 44vw;
+		margin-top: 3vh;
+		margin-bottom: 3vh;
+	}
+
+	.v6 {
+		/* display: grid;
+		grid-column: 2/3s;
+		grid-row: 3/4; */
+		/* border: 5px solid white;
+		box-shadow: 5px 5px 50px black; */
+		margin: 0 auto;
+		width: 80vw;
+		height: 44vw;
+		margin-top: 3vh;
+		margin-bottom: 3vh;
+	}
+
+	.subscribe {
+		font-family: sans-serif;
+		color: white;
+		font-size: 1rem;
+		text-align: center;
+		text-shadow: 1px 1px black;
+		padding-bottom: 3vw;
+	}
+
+	.youtube-button {
+		background-color: #CC0100;
+		border: none;
+		width: auto;
+		height: auto;
+		margin: 0 auto;
+		display: flex;
+		align-self: center;
+		justify-self: center;
+		/* margin: 3vw 0 auto; */
+	}
+
+	.youtube-button>a {
+		color: white;
+		font-family: sans-serif;
+		font-size: 1.5rem;
+		text-transform: uppercase;
+		margin: 0 auto;
+	}
+
+	#yb-container {
+		margin: 2vw 0 4vw 0;
+		display: flex;
+	}
+
+	/* Front Section - Freemotion */
+
+	.freemotion-section {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+
+	#content > div:nth-child(8) > div.freemotion-section > div:nth-child(1) > span.product-header__subcategory > a, #content > div:nth-child(8) > div.freemotion-section > div:nth-child(1) > span.product-header__subcategory {
+		font-size: 8vw;
+		text-align: center;
+	}
+
+	.fm-title {
+		color: #ffc700;
+		font-family: XXIINeueNorm-CndBlackIt;
+	    font-size: 12vw;
+	    line-height: 1;
+			text-align: center;
+	}
+
+	.number {
+		font-size: 8vw;
+	}
+
+	.fm-machine {
+		width: 96vw;
+		padding: 2vw;
+		margin: 2vw;
+	}
+
+	.fm-button {
+		background-color:  #E49224;
+		margin: 0 auto;
+	}
+
+	.fm-link {
+		color: white;
+		font-size: 1.5vw;
+		text-transform: uppercase;
+	}
+
+	.fm-img {
+		height: 50vh;
+		margin: 0 auto;
+	}
+
+	.fm-desc {
+		font-family: sans-serif;
+		font-size: 7vw;
+		text-align: center;
+		padding-top: 5vw;
+	}
+
+	.fm-button-container {
+		padding-top: 3vw;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.fm-link {
+		color: white;
+		font-size: 6vw;
+		text-transform: uppercase;
+	}
+
+	.product-info {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+
+	.info-point {
+		padding: 2vw;
+		width: 70vw;
+		/* text-align: center; */
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+		align-self: center;
+	}
+
+	.download, .download:visited, .download:link {
+		color: white !important;
+		border-radius: 25px;
+		background-color: white;
+		border: 3px solid black;
+		    margin-bottom: 1.5em;
+		    margin: 6vw 0;
+
+	}
+
+	.info-title {
+		text-transform: uppercase;
+	    color: white;
+	    line-height: 20px;
+		font-family: HouschkaAltPro-Medium;
+	    font-size: 7vw;
+	    color: white;
+			line-height: 1.1;
+	}
+
+	.info-bite {
+		font-family: HouschkaAltPro-Medium;
+	    font-size: 5vw;
+	    color: white;
+	    line-height: 18px;
+	}
+
+	.product-info-title {
+		background-color: white;
+	    color: #104777;
+	    font-weight: bold;
+	    font-size: 9vw;
+		  color: #ffc700;
+	}
+
+	/* .product-box {
+		width: 60vw;
+		display: flex;
+		flex-direction: column;
+		background-color: white;
+			padding: 2vw;
+
+	}
+
+	.box-right {
+		 width: 50vw;
+
+	}
+
+	.box-left {
+		width: 35vw;
+	} */
+
+	.box-title {
+		width: 60vw;
+		margin: 0 auto;
+		color: white;
+		font-size: 6vw
+	}
+	hr {
+		border-top:2px solid white;
+		width: 50vw;
+		margin: 1vw 1vw 1vw 0;
+	}
+
+	/***** Articles ****/
+
+	.articles-disclaimer-text {
+		    padding: 2vw 5vw;
+				font-size: 4.5vw;
+	}
+
+	.logo {
+		width: 50vw;
+		height: auto;
+	display: flex;
+	padding: 5vw 0;
+	margin: auto;
+	}
+
+
+
+	.articles-links {
+	display: flex;
+	flex-direction: column;
+	padding: 2vw 5vw;
+
+	}
+
+	.articles-links > a {
+		width: 95vw;
+
+	}
+
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+
+	#coming-soon {
+		width: 100vw;
+		height: 100vh;
+		overflow: hidden;
+		background-image: url('https://dougbrignole.com/wp-content/uploads/2019/10/db9-sm.jpg');
+		background-size: 50%;
+		background-position: bottom;
+		background-repeat: no-repeat;
+		top: 5vw !important;
+		position: fixed !important;
+	}
+
+	#soon-title {
+		font-size: 7vw;
+	text-align: left;
+	font-family: 'Big Shoulders Display', cursive;
+	color: #E49224;
+	width: 100vw;
+	margin-bottom: .5vw;
+	padding-left: 5vw;
+	padding-top: 5vw;
+	}
+
+	a.nav-link,
+	a.dropdown-item {
+		font-family: 'Big Shoulders Display', cursive !important;
+		font-size: 2vw;
+	}
+
+
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+
+	#coming-soon {
+		width: 100vw;
+		height: 100vh;
+		overflow: hidden;
+		background-image: url('https://dougbrignole.com/wp-content/uploads/2019/10/db9-sm.jpg');
+		background-size: 70%;
+		background-position: bottom;
+		background-repeat: no-repeat;
+		top: 5vw !important;
+		position: fixed !important;
+	}
+
+	#soon-title {
+		font-size: 15vw;
+		text-align: center;
+		font-family: 'Big Shoulders Display', cursive;
+		color: #E49224;
+		width: 100vw;
+		margin: 3vw;
+		padding: 0;
+	}
+
+	a.nav-link,
+	a.dropdown-item {
+		font-family: 'Big Shoulders Display', cursive !important;
+		font-size: 1.5vw;
+		font-weight: 900;
+	}
+
+}
